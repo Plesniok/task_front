@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:task_front/tasks/bloc/task_bloc.dart';
 import 'package:task_front/tasks/hadlers/add_task_floating_button.dart';
 import 'package:task_front/user/bloc/user_bloc.dart';
 import 'package:task_front/user/page/login_page.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: "lib/.env");
   runApp(const MyApp());
 }
 
